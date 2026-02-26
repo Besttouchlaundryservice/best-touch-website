@@ -156,7 +156,7 @@
                 <div class="flex items-center space-x-3 cursor-pointer" onclick="window.scrollTo(0,0)">
                     <!-- Small Logo in Nav -->
                     <div class="w-10 h-10 rounded-full overflow-hidden gold-glow border-2 border-amber-400 bg-black flex items-center justify-center">
-                        <img src="https://drive.google.com/uc?export=view&id=1AeP31TSiTujAz0lH4J-Yk2-36hEFl5vF" alt="BT Logo" class="w-full h-full logo-img" onerror="this.parentElement.innerHTML='<span class=\'text-amber-400 font-bold text-lg\'>BT</span>'">
+                        <img src="https://lh3.googleusercontent.com/d/1AeP31TSiTujAz0lH4J-Yk2-36hEFl5vF" alt="BT Logo" class="w-full h-full logo-img" onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=\'text-amber-400 font-bold text-lg\'>BT</span>'">
                     </div>
                     <span class="text-lg font-bold tracking-wider text-white">BEST TOUCH</span>
                 </div>
@@ -195,7 +195,7 @@
             <!-- Main Logo Display -->
             <div class="mb-8 flex justify-center">
                 <div class="relative w-48 h-64 md:w-56 md:h-72 rounded-2xl overflow-hidden gold-glow border-2 border-amber-400/30 bg-black flex items-center justify-center">
-                    <img src="https://drive.google.com/uc?export=view&id=1AeP31TSiTujAz0lH4J-Yk2-36hEFl5vF" alt="Best Touch Laundry Services Logo" class="w-full h-full logo-img" onerror="this.parentElement.innerHTML='<div class=\'flex flex-col items-center justify-center h-full text-amber-400\'><span class=\'text-6xl font-bold\'>BT</span><span class=\'text-sm tracking-widest mt-2\'>BEST TOUCH</span></div>'">
+                    <img src="https://lh3.googleusercontent.com/d/1AeP31TSiTujAz0lH4J-Yk2-36hEFl5vF" alt="Best Touch Laundry Services Logo" class="w-full h-full logo-img" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'flex flex-col items-center justify-center h-full text-amber-400\'><span class=\'text-6xl font-bold\'>BT</span><span class=\'text-sm tracking-widest mt-2\'>BEST TOUCH</span></div>'">
                 </div>
             </div>
             
@@ -499,7 +499,7 @@
             <div class="flex flex-col md:flex-row justify-between items-center mb-8">
                 <div class="flex items-center space-x-3 mb-4 md:mb-0">
                     <div class="w-10 h-10 rounded-full overflow-hidden border-2 border-amber-400 bg-black flex items-center justify-center">
-                        <img src="https://drive.google.com/uc?export=view&id=1AeP31TSiTujAz0lH4J-Yk2-36hEFl5vF" alt="BT Logo" class="w-full h-full logo-img" onerror="this.parentElement.innerHTML='<span class=\'text-amber-400 font-bold text-lg\'>BT</span>'">
+                        <img src="https://lh3.googleusercontent.com/d/1AeP31TSiTujAz0lH4J-Yk2-36hEFl5vF" alt="BT Logo" class="w-full h-full logo-img" onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=\'text-amber-400 font-bold text-lg\'>BT</span>'">
                     </div>
                     <span class="text-lg font-bold tracking-wider text-white">BEST TOUCH</span>
                 </div>
@@ -532,7 +532,7 @@
                 
                 <div class="text-center mb-6">
                     <div class="w-16 h-16 mx-auto rounded-full overflow-hidden border-2 border-amber-400 bg-black flex items-center justify-center mb-4">
-                        <img src="https://drive.google.com/uc?export=view&id=1AeP31TSiTujAz0lH4J-Yk2-36hEFl5vF" alt="BT Logo" class="w-full h-full logo-img" onerror="this.parentElement.innerHTML='<span class=\'text-amber-400 font-bold text-2xl\'>BT</span>'">
+                        <img src="https://lh3.googleusercontent.com/d/1AeP31TSiTujAz0lH4J-Yk2-36hEFl5vF" alt="BT Logo" class="w-full h-full logo-img" onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=\'text-amber-400 font-bold text-2xl\'>BT</span>'">
                     </div>
                     <h3 class="text-2xl font-bold tracking-tight text-white">BOOK SERVICE</h3>
                     <p class="text-amber-400/60 text-xs uppercase tracking-widest mt-2">We will contact you shortly</p>
@@ -542,29 +542,29 @@
                     <div>
                         <label class="block text-xs font-medium mb-2 text-amber-400/60 uppercase tracking-wider">Service</label>
                         <select id="service-select" class="w-full bg-black border border-amber-400/20 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-amber-400 transition-colors text-sm">
-                            <option value="wash-fold">Wash & Fold (₦400-₦500/item)</option>
-                            <option value="dry-cleaning">Dry Cleaning (₦700-₦1,000/item)</option>
+                            <option value="Wash & Fold">Wash & Fold (₦400-₦500/item)</option>
+                            <option value="Dry Cleaning">Dry Cleaning (₦700-₦1,000/item)</option>
                         </select>
                     </div>
                     
                     <div>
                         <label class="block text-xs font-medium mb-2 text-amber-400/60 uppercase tracking-wider">Full Name</label>
-                        <input type="text" required class="w-full bg-black border border-amber-400/20 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-amber-400 transition-colors text-sm" placeholder="Your name">
+                        <input type="text" id="customer-name" required class="w-full bg-black border border-amber-400/20 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-amber-400 transition-colors text-sm" placeholder="Your name">
                     </div>
                     
                     <div>
                         <label class="block text-xs font-medium mb-2 text-amber-400/60 uppercase tracking-wider">Phone</label>
-                        <input type="tel" required class="w-full bg-black border border-amber-400/20 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-amber-400 transition-colors text-sm" placeholder="0800 000 0000">
+                        <input type="tel" id="customer-phone" required class="w-full bg-black border border-amber-400/20 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-amber-400 transition-colors text-sm" placeholder="0800 000 0000">
                     </div>
                     
                     <div>
                         <label class="block text-xs font-medium mb-2 text-amber-400/60 uppercase tracking-wider">Address</label>
-                        <input type="text" required class="w-full bg-black border border-amber-400/20 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-amber-400 transition-colors text-sm" placeholder="Street address in Aare Oluyole">
+                        <input type="text" id="customer-address" required class="w-full bg-black border border-amber-400/20 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-amber-400 transition-colors text-sm" placeholder="Street address in Aare Oluyole">
                     </div>
                     
                     <div>
                         <label class="block text-xs font-medium mb-2 text-amber-400/60 uppercase tracking-wider">Preferred Date</label>
-                        <input type="date" required class="w-full bg-black border border-amber-400/20 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-amber-400 transition-colors text-sm">
+                        <input type="date" id="pickup-date" required class="w-full bg-black border border-amber-400/20 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-amber-400 transition-colors text-sm">
                     </div>
                     
                     <button type="submit" class="w-full bg-amber-400 text-black py-4 rounded-lg font-bold tracking-wide hover:bg-amber-300 transition-all mt-2 text-sm uppercase shadow-lg shadow-amber-500/30">
@@ -599,10 +599,21 @@
         });
 
         // Modal Functions
-        function openBooking(service = 'wash-fold') {
-            document.getElementById('service-select').value = service;
+        function openBooking(service = 'Wash & Fold') {
+            const select = document.getElementById('service-select');
+            if (service === 'wash-fold') {
+                select.value = 'Wash & Fold';
+            } else if (service === 'dry-cleaning') {
+                select.value = 'Dry Cleaning';
+            } else {
+                select.value = service;
+            }
             document.getElementById('booking-modal').classList.remove('hidden');
             document.body.style.overflow = 'hidden';
+            
+            // Set minimum date to today
+            const today = new Date().toISOString().split('T')[0];
+            document.getElementById('pickup-date').min = today;
         }
 
         function closeBooking() {
@@ -615,26 +626,47 @@
             }, 300);
         }
 
-        function handleBooking(e) {
-            e.preventDefault();
-            const form = e.target;
-            const successMsg = document.getElementById('success-message');
-            
-            const btn = form.querySelector('button[type="submit"]');
-            const originalText = btn.textContent;
-            btn.innerHTML = '<span class="loader-bubble"></span><span class="loader-bubble"></span><span class="loader-bubble"></span>';
-            btn.disabled = true;
-            
-            setTimeout(() => {
-                form.classList.add('hidden');
-                successMsg.classList.remove('hidden');
-                btn.textContent = originalText;
-                btn.disabled = false;
-            }, 1500);
-        }
-
         function selectService(service) {
             openBooking(service);
+        }
+
+        // Handle Booking - Send to WhatsApp
+        function handleBooking(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const service = document.getElementById('service-select').value;
+            const name = document.getElementById('customer-name').value;
+            const phone = document.getElementById('customer-phone').value;
+            const address = document.getElementById('customer-address').value;
+            const date = document.getElementById('pickup-date').value;
+            
+            // Format date
+            const formattedDate = new Date(date).toLocaleDateString('en-NG', {
+                weekday: 'long',
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+            });
+            
+            // Create WhatsApp message
+            const message = `*NEW LAUNDRY ORDER*%0A%0A` +
+                `*Service:* ${service}%0A` +
+                `*Name:* ${name}%0A` +
+                `*Phone:* ${phone}%0A` +
+                `*Address:* ${address}%0A` +
+                `*Pickup Date:* ${formattedDate}%0A%0A` +
+                `Please confirm this order.`;
+            
+            // Open WhatsApp with proper URL
+            const whatsappUrl = `https://api.whatsapp.com/send?phone=2348038307326&text=${message}`;
+            
+            // Try to open WhatsApp
+            window.location.href = whatsappUrl;
+            
+            // Show success message
+            document.querySelector('form').classList.add('hidden');
+            document.getElementById('success-message').classList.remove('hidden');
         }
 
         // Smooth scroll
