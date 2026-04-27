@@ -1,1 +1,1078 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best Touch Laundry Services | Premium Wash & Fold in Ibadan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        @keyframes shine {
+            0% { background-position: -200% center; }
+            100% { background-position: 200% center; }
+        }
+        
+        @keyframes pulse-glow {
+            0%, 100% { box-shadow: 0 0 20px rgba(251,191,36,0.2); }
+            50% { box-shadow: 0 0 40px rgba(251,191,36,0.4); }
+        }
+        
+        @keyframes bubble {
+            0% { transform: translateY(100vh) scale(0); opacity: 0; }
+            50% { opacity: 0.2; }
+            100% { transform: translateY(-100vh) scale(1); opacity: 0; }
+        }
+        
+        .float-anim { animation: float 6s ease-in-out infinite; }
+        
+        .text-shine {
+            background: linear-gradient(90deg, #fbbf24 0%, #f59e0b 25%, #fbbf24 50%, #d97706 75%, #fbbf24 100%);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: shine 3s linear infinite;
+        }
+        
+        .gold-glow {
+            animation: pulse-glow 3s ease-in-out infinite;
+        }
+        
+        .bubble {
+            position: absolute;
+            border-radius: 50%;
+            background: radial-gradient(circle at 30% 30%, rgba(251,191,36,0.2), rgba(251,191,36,0.05));
+            animation: bubble 20s infinite;
+        }
+        
+        .glass {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(251,191,36,0.1);
+        }
+        
+        .glass-dark {
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(251,191,36,0.2);
+        }
+        
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0a0a0a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #fbbf24;
+            border-radius: 5px;
+        }
+        
+        .service-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            background: linear-gradient(145deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.02) 100%);
+            border: 1px solid rgba(251,191,36,0.1);
+        }
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(251,191,36,0.15);
+            border-color: rgba(251,191,36,0.3);
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #fbbf24 0%, #d97706 100%);
+            color: black;
+            transition: all 0.3s;
+            font-weight: 700;
+        }
+        .btn-primary:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 30px rgba(251,191,36,0.5);
+        }
+        
+        .btn-outline {
+            border: 2px solid #fbbf24;
+            color: #fbbf24;
+            transition: all 0.3s;
+        }
+        .btn-outline:hover {
+            background: #fbbf24;
+            color: black;
+        }
+        
+        .loader-bubble {
+            width: 20px;
+            height: 20px;
+            background: #fbbf24;
+            border-radius: 50%;
+            display: inline-block;
+            animation: loader 1.4s infinite ease-in-out both;
+        }
+        .loader-bubble:nth-child(1) { animation-delay: -0.32s; }
+        .loader-bubble:nth-child(2) { animation-delay: -0.16s; }
+        
+        @keyframes loader {
+            0%, 80%, 100% { transform: scale(0); }
+            40% { transform: scale(1); }
+        }
+        
+        .gold-accent {
+            color: #fbbf24;
+        }
+        
+        .bg-dark {
+            background-color: #0a0a0a;
+        }
+        
+        .bg-darker {
+            background-color: #050505;
+        }
+        
+        .logo-img {
+            object-fit: cover;
+            object-position: center;
+        }
+        
+        /* New styles for enhanced booking */
+        .location-btn {
+            background: rgba(251, 191, 36, 0.1);
+            border: 1px solid rgba(251, 191, 36, 0.3);
+            transition: all 0.3s;
+        }
+        .location-btn:hover {
+            background: rgba(251, 191, 36, 0.2);
+        }
+        .location-btn.active {
+            background: #fbbf24;
+            color: black;
+        }
+        
+        .order-ref {
+            font-family: 'Space Grotesk', monospace;
+            letter-spacing: 2px;
+        }
 
+        /* Order method selection styles */
+        .method-btn {
+            background: rgba(251, 191, 36, 0.1);
+            border: 1px solid rgba(251, 191, 36, 0.3);
+            transition: all 0.3s;
+        }
+        .method-btn:hover {
+            background: rgba(251, 191, 36, 0.2);
+        }
+        .method-btn.active {
+            background: #fbbf24;
+            color: black;
+        }
+
+        /* Price list image styles */
+        .price-list-container {
+            position: relative;
+            overflow: hidden;
+            border-radius: 1rem;
+            border: 2px solid rgba(251, 191, 36, 0.3);
+        }
+        .price-list-container img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s;
+        }
+        .price-list-container:hover img {
+            transform: scale(1.02);
+        }
+
+        /* Item selector styles */
+        .item-checkbox {
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            border: 2px solid rgba(251, 191, 36, 0.5);
+            border-radius: 4px;
+            background: transparent;
+            cursor: pointer;
+            position: relative;
+            transition: all 0.3s;
+        }
+        .item-checkbox:checked {
+            background: #fbbf24;
+            border-color: #fbbf24;
+        } li
+        .item-checkbox:checked::after {
+            content: '✓';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: black;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        /* Modal tabs */
+        .modal-tab {
+            background: transparent;
+            border: none;
+            color: #9ca3af;
+            padding: 0.75rem 1.5rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            border-bottom: 2px solid transparent;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+        .modal-tab.active {
+            color: #fbbf24;
+            border-bottom-color: #fbbf24;
+        }
+        .modal-tab:hover {
+            color: #fbbf24;
+        }
+
+        /* Price list modal */
+        .price-list-modal {
+            max-width: 900px !important;
+        }
+    </style>
+</head>
+<body class="bg-dark text-white overflow-x-hidden">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center space-x-3 cursor-pointer" onclick="window.scrollTo(0,0)">
+                    <div class="w-10 h-10 rounded-full overflow-hidden gold-glow border-2 border-amber-400 bg-black flex items-center justify-center">
+                        <img src="https://lh3.googleusercontent.com/d/1AeP31TSiTujAz0lH4J-Yk2-36hEFl5vF" alt="BT Logo" class="w-full h-full logo-img" onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=\'text-amber-400 font-bold text-lg\'>BT</span>'">
+                    </div>
+                    <span class="text-lg font-bold tracking-wider text-white">BEST TOUCH</span>
+                </div>
+                
+                <div class="hidden md:flex space-x-8">
+                    <a href="#services" class="hover:text-amber-400 transition-colors text-sm tracking-wide">SERVICES</a>
+                    <a href="#pricing" class="hover:text-amber-400 transition-colors text-sm tracking-wide">PRICING</a>
+                    <a href="#price-list" class="hover:text-amber-400 transition-colors text-sm tracking-wide">PRICE LIST</a>
+                    <a href="#process" class="hover:text-amber-400 transition-colors text-sm tracking-wide">PROCESS</a>
+                    <a href="#contact" class="hover:text-amber-400 transition-colors text-sm tracking-wide">CONTACT</a>
+                </div>
+                
+                <button onclick="openBooking()" class="btn-primary px-6 py-2 rounded-full text-sm tracking-wide">
+                    BOOK NOW
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden bg-darker">
+        <div class="absolute inset-0 overflow-hidden">
+            <div class="bubble w-4 h-4 left-10" style="animation-delay: 0s;"></div>
+            <div class="bubble w-6 h-6 left-20" style="animation-delay: 3s;"></div>
+            <div class="bubble w-3 h-3 left-1/4" style="animation-delay: 6s;"></div>
+            <div class="bubble w-8 h-8 right-20" style="animation-delay: 2s;"></div>
+            <div class="bubble w-5 h-5 right-1/3" style="animation-delay: 5s;"></div>
+            <div class="bubble w-7 h-7 right-10" style="animation-delay: 8s;"></div>
+            
+            <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-amber-500 opacity-10 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-yellow-600 opacity-10 rounded-full blur-3xl"></div>
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="mb-8 flex justify-center">
+                <div class="relative w-48 h-64 md:w-56 md:h-72 rounded-2xl overflow-hidden gold-glow border-2 border-amber-400/30 bg-black flex items-center justify-center">
+                    <img src="https://lh3.googleusercontent.com/d/1AeP31TSiTujAz0lH4J-Yk2-36hEFl5vF" alt="Best Touch Laundry Services Logo" class="w-full h-full logo-img" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'flex flex-col items-center justify-center h-full text-amber-400\'><span class=\'text-6xl font-bold\'>BT</span><span class=\'text-sm tracking-widest mt-2\'>BEST TOUCH</span></div>'">
+                </div>
+            </div>
+            
+            <div class="inline-block mb-6 px-6 py-3 rounded-full glass text-sm font-medium text-amber-300 tracking-widest uppercase float-anim border border-amber-400/20">
+                ✨ Aare Oluyole, Ibadan Nigeria
+            </div>
+            
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight tracking-tight">
+                BEST TOUCH<br>
+                <span class="text-shine">LAUNDRY SERVICES</span>
+            </h1>
+            
+            <p class="text-lg md:text-xl text-gray-400 mb-10 max-w-2xl mx-auto leading-relaxed font-light">
+                Premium dry cleaning and laundry services in Ibadan. 
+                <span class="text-amber-400">Quality care</span> for your garments with professional touch.
+            </p>
+        
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <button onclick="openBooking()" class="btn-primary px-10 py-4 rounded-full text-base tracking-wide shadow-lg shadow-amber-500/30">
+                    SCHEDULE PICKUP
+                </button>
+                <button onclick="document.getElementById('price-list').scrollIntoView({behavior: 'smooth'})" class="btn-outline px-10 py-4 rounded-full text-base tracking-wide">
+                    VIEW PRICE LIST
+                </button>
+            </div>
+            
+            <div class="mt-12 flex justify-center space-x-8 text-xs text-gray-500 tracking-widest uppercase">
+                <div class="flex items-center space-x-2">
+                    <span class="w-2 h-2 bg-amber-400 rounded-full"></span>
+                    <span>24-48h Turnaround</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <span class="w-2 h-2 bg-amber-400 rounded-full"></span>
+                    <span>Premium Care</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <span class="w-2 h-2 bg-amber-400 rounded-full"></span>
+                    <span>Free Pickup</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="absolute bottom-10 left-10 glass-dark p-4 rounded-2xl hidden lg:block float-anim" style="animation-delay: 1s;">
+            <div class="text-xs text-amber-400 uppercase tracking-widest mb-1">Call Us</div>
+            <div class="text-lg font-bold text-white">0708 316 2538</div>
+        </div>
+        
+        <div class="absolute top-32 right-10 glass-dark p-4 rounded-2xl hidden lg:block float-anim" style="animation-delay: 2s;">
+            <div class="text-xs text-amber-400 uppercase tracking-widest mb-1">Service Area</div>
+            <div class="text-sm font-bold text-white">Aare Oluyole</div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-dark relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4 tracking-tight">OUR <span class="text-amber-400">SERVICES</span></h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-transparent via-amber-400 to-transparent mx-auto mb-4"></div>
+                <p class="text-gray-400 max-w-2xl mx-auto font-light">Professional care for every fabric type</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="service-card rounded-3xl p-8 relative overflow-hidden group cursor-pointer" onclick="selectService('wash-fold')">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-amber-400/10 rounded-full -mr-16 -mt-16 transition-transform group-hover:scale-150"></div>
+                    <div class="relative z-10">
+                        <div class="w-14 h-14 bg-gradient-to-br from-amber-400 to-amber-600 text-black rounded-2xl flex items-center justify-center mb-6 font-bold text-2xl shadow-lg shadow-amber-500/30">
+                            W
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 tracking-wide text-white">WASH & FOLD</h3>
+                        <p class="text-gray-400 mb-6 font-light leading-relaxed">Regular laundry sorted by color and fabric type, washed with quality detergents, and professionally folded.</p>
+                        <div class="flex justify-between items-center border-t border-white/10 pt-4">
+                            <span class="text-3xl font-bold text-amber-400">₦400 <span class="text-lg text-gray-500">- ₦500</span></span>
+                            <span class="text-xs text-amber-400 uppercase tracking-widest group-hover:text-white transition-colors">per item →</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-card rounded-3xl p-8 relative overflow-hidden group cursor-pointer" onclick="selectService('dry-cleaning')">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-amber-400/10 rounded-full -mr-16 -mt-16 transition-transform group-hover:scale-150"></div>
+                    <div class="relative z-10">
+                        <div class="w-14 h-14 bg-gradient-to-br from-amber-400 to-amber-600 text-black rounded-2xl flex items-center justify-center mb-6 font-bold text-2xl shadow-lg shadow-amber-500/30">
+                            D
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 tracking-wide text-white">DRY CLEANING</h3>
+                        <p class="text-gray-400 mb-6 font-light leading-relaxed">Expert care for suits, native wears, and delicate fabrics. Stain removal and professional pressing included.</p>
+                        <div class="flex justify-between items-center border-t border-white/10 pt-4">
+                            <span class="text-3xl font-bold text-amber-400"> <span class="text-lg text-gray-500"></span></span>
+                            <span class="text-xs text-amber-400 uppercase tracking-widest group-hover:text-white transition-colors"> </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
+                <div class="glass p-6 rounded-2xl text-center hover:bg-amber-400/10 transition-all cursor-pointer border border-amber-400/10 hover:border-amber-400/30">
+                    <div class="text-3xl mb-3">👔</div>
+                    <div class="text-xs font-medium tracking-widest uppercase text-gray-300">Ironing</div>
+                </div>
+                <div class="glass p-6 rounded-2xl text-center hover:bg-amber-400/10 transition-all cursor-pointer border border-amber-400/10 hover:border-amber-400/30">
+                    <div class="text-3xl mb-3">🛏️</div>
+                    <div class="text-xs font-medium tracking-widest uppercase text-gray-300">Bedding</div>
+                </div>
+                <div class="glass p-6 rounded-2xl text-center hover:bg-amber-400/10 transition-all cursor-pointer border border-amber-400/10 hover:border-amber-400/30">
+                    <div class="text-3xl mb-3">👟</div>
+                    <div class="text-xs font-medium tracking-widest uppercase text-gray-300">Shoes</div>
+                </div>
+                <div class="glass p-6 rounded-2xl text-center hover:bg-amber-400/10 transition-all cursor-pointer border border-amber-400/10 hover:border-amber-400/30">
+                    <div class="text-3xl mb-3">🧸</div>
+                    <div class="text-xs font-medium tracking-widest uppercase text-gray-300">Toys</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Price List Image Section -->
+    <section id="price-list" class="py-20 bg-darker relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-b from-amber-500/5 to-transparent"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold mb-4 tracking-tight">OUR <span class="text-amber-400">PRICE LIST</span></h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-transparent via-amber-400 to-transparent mx-auto mb-4"></div>
+                <p class="text-gray-400 font-light max-w-2xl mx-auto">Browse our complete price list and select the items you want to order. Click on items to add them to your order.</p>
+            </div>
+
+            <!-- Price List Image -->
+            <div class="max-w-3xl mx-auto mb-8">
+                <div class="price-list-container bg-black">
+                    <!-- REPLACE THIS IMAGE URL WITH YOUR PRICE LIST IMAGE -->
+                   <img id="price-list-image"
+src="https://i.ibb.co/Sw6ZSvhR/file-0000000095787246bf8bea5492df00c3.png"
+alt="Best Touch Laundry Price List" class="cursor-pointer" onclick="openPriceListModal()">
+                </div>
+                <p class="text-center text-sm text-gray-500 mt-4">💡 Click on the image to view full size and select items</p>
+            </div>
+
+            <!-- Quick Order Button -->
+            <div class="text-center">
+                <button onclick="openBooking()" class="btn-primary px-10 py-4 rounded-full text-base tracking-wide shadow-lg shadow-amber-500/30">
+                    PLACE ORDER NOW
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section id="process" class="py-20 bg-dark relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-b from-amber-500/5 to-transparent"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4 tracking-tight">HOW IT <span class="text-amber-400">WORKS</span></h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-transparent via-amber-400 to-transparent mx-auto mb-4"></div>
+                <p class="text-gray-400 font-light">Three simple steps to fresh laundry</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 relative">
+                <div class="hidden md:block absolute top-1/2 left-0 right-0 h-px bg-gradient-to-r from-transparent via-amber-400/50 to-transparent transform -translate-y-1/2 z-0"></div>
+
+                <div class="relative z-10 text-center">
+                    <div class="w-20 h-20 mx-auto bg-gradient-to-br from-amber-400 to-amber-600 text-black rounded-full flex items-center justify-center text-2xl font-bold mb-6 shadow-lg shadow-amber-500/30 float-anim">
+                        1
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 tracking-wide text-white">BOOK</h3>
+                    <p class="text-gray-400 font-light">Call, WhatsApp, or Email us to schedule pickup at your location in Aare Oluyole.</p>
+                </div>
+
+                <div class="relative z-10 text-center">
+                    <div class="w-20 h-20 mx-auto bg-gradient-to-br from-amber-400 to-amber-600 text-black rounded-full flex items-center justify-center text-2xl font-bold mb-6 shadow-lg shadow-amber-500/30 float-anim" style="animation-delay: 0.5s;">
+                        2
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 tracking-wide text-white">CLEAN</h3>
+                    <p class="text-gray-400 font-light">We professionally clean your items with premium care and attention.</p>
+                </div>
+
+                <div class="relative z-10 text-center">
+                    <div class="w-20 h-20 mx-auto bg-gradient-to-br from-amber-400 to-amber-600 text-black rounded-full flex items-center justify-center text-2xl font-bold mb-6 shadow-lg shadow-amber-500/30 float-anim" style="animation-delay: 1s;">
+                        3
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 tracking-wide text-white">DELIVER</h3>
+                    <p class="text-gray-400 font-light">Fresh, clean laundry delivered to your door within 24-48 hours.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-20 bg-darker">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold mb-4 tracking-tight">OUR <span class="text-amber-400">PRICING</span></h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-transparent via-amber-400 to-transparent mx-auto mb-4"></div>
+                <p class="text-gray-400 font-light">Transparent pricing, no hidden fees</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="bg-dark rounded-3xl p-8 border border-amber-400/20 hover:border-amber-400/40 transition-all relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-amber-400 to-transparent"></div>
+                    <h3 class="text-xl font-bold mb-2 tracking-wide text-gray-300">WASH & FOLD</h3>
+                    <div class="text-5xl font-bold mb-2 text-amber-400">₦400<span class="text-2xl text-gray-500">-₦500</span></div>
+                    <div class="text-xs text-amber-400/60 uppercase tracking-widest mb-8">per item</div>
+                    <ul class="space-y-4 mb-8 text-sm text-gray-400">
+                        <li class="flex items-center"><span class="w-1.5 h-1.5 bg-amber-400 rounded-full mr-3"></span>Free pickup & delivery</li>
+                        <li class="flex items-center"><span class="w-1.5 h-1.5 bg-amber-400 rounded-full mr-3"></span>Quality detergent</li>
+                        <li class="flex items-center"><span class="w-1.5 h-1.5 bg-amber-400 rounded-full mr-3"></span>Neat folding</li>
+                        <li class="flex items-center"><span class="w-1.5 h-1.5 bg-amber-400 rounded-full mr-3"></span>24-48h turnaround</li>
+                    </ul>
+                    <button onclick="openBooking('wash-fold')" class="w-full py-4 rounded-full border-2 border-amber-400 text-amber-400 hover:bg-amber-400 hover:text-black transition-all font-bold tracking-wide text-sm uppercase">Select Service</button>
+                </div>
+
+                <div class="bg-dark rounded-3xl p-8 border-2 border-amber-400 relative overflow-hidden transform scale-105 shadow-2xl shadow-amber-500/20">
+                    <div class="absolute top-4 right-4 bg-amber-400 text-black px-3 py-1 rounded-full text-xs font-bold tracking-wider">POPULAR</div>
+                    <div class="absolute top-0 left-0 w-full h-1 bg-amber-400"></div>
+                    <h3 class="text-xl font-bold mb-2 tracking-wide text-gray-300">DRY CLEANING</h3>
+                    <div class="text-5xl font-bold mb-2 text-amber-400"><span class="text-2xl text-gray-500"></span></div>
+                    <div class="text-xs text-amber-400/60 uppercase tracking-widest mb-8"></div>
+                    <ul class="space-y-4 mb-8 text-sm text-gray-400">
+                        <li class="flex items-center"><span class="w-1.5 h-1.5 bg-amber-400 rounded-full mr-3"></span>Stain treatment</li>
+                        <li class="flex items-center"><span class="w-1.5 h-1.5 bg-amber-400 rounded-full mr-3"></span>Professional pressing</li>
+                        <li class="flex items-center"><span class="w-1.5 h-1.5 bg-amber-400 rounded-full mr-3"></span>Delicate fabric care</li>
+                        <li class="flex items-center"><span class="w-1.5 h-1.5 bg-amber-400 rounded-full mr-3"></span>Garment protection</li>
+                    </ul>
+                    <button onclick="openBooking('dry-cleaning')" class="w-full py-4 rounded-full bg-amber-400 text-black hover:bg-amber-300 transition-all font-bold tracking-wide text-sm uppercase shadow-lg shadow-amber-500/30">Select Service</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="py-20 bg-dark relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold mb-4 tracking-tight">WHAT <span class="text-amber-400">CUSTOMERS</span> SAY</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-transparent via-amber-400 to-transparent mx-auto mb-4"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="glass p-8 rounded-2xl border border-amber-400/10 hover:border-amber-400/30 transition-all">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-gradient-to-br from-amber-400 to-amber-600 text-black rounded-full flex items-center justify-center font-bold text-lg">TO</div>
+                        <div class="ml-4">
+                            <div class="font-bold tracking-wide text-white">Tolu O.</div>
+                            <div class="text-xs text-amber-400/60 uppercase tracking-wider">Aare Oluyole</div>
+                        </div>
+                    </div>
+                    <div class="flex text-amber-400 mb-4 text-xs">★★★★★</div>
+                    <p class="text-gray-400 font-light leading-relaxed">"Best Touch Laundry lives up to the name! My clothes always come back looking brand new. The pickup service is so convenient."</p>
+                </div>
+
+                <div class="glass p-8 rounded-2xl border border-amber-400/10 hover:border-amber-400/30 transition-all">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-gradient-to-br from-amber-400 to-amber-600 text-black rounded-full flex items-center justify-center font-bold text-lg">FA</div>
+                        <div class="ml-4">
+                            <div class="font-bold tracking-wide text-white">Fatima A.</div>
+                            <div class="text-xs text-amber-400/60 uppercase tracking-wider">Ring Road</div>
+                        </div>
+                    </div>
+                    <div class="flex text-amber-400 mb-4 text-xs">★★★★★</div>
+                    <p class="text-gray-400 font-light leading-relaxed">"They handled my traditional wears with such care! Professional service at affordable prices. Highly recommended in Ibadan."</p>
+                </div>
+
+                <div class="glass p-8 rounded-2xl border border-amber-400/10 hover:border-amber-400/30 transition-all">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-gradient-to-br from-amber-400 to-amber-600 text-black rounded-full flex items-center justify-center font-bold text-lg">EK</div>
+                        <div class="ml-4">
+                            <div class="font-bold tracking-wide text-white">Emeka K.</div>
+                            <div class="text-xs text-amber-400/60 uppercase tracking-wider">Bodija</div>
+                        </div>
+                    </div>
+                    <div class="flex text-amber-400 mb-4 text-xs">★★★★★</div>
+                    <p class="text-gray-400 font-light leading-relaxed">"Fast, reliable, and professional. My office shirts have never looked better. Great value for money!"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-darker">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold mb-4 tracking-tight">GET IN <span class="text-amber-400">TOUCH</span></h2>
+            <div class="w-24 h-1 bg-gradient-to-r from-transparent via-amber-400 to-transparent mx-auto mb-8"></div>
+            
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+                <div class="glass p-6 rounded-2xl border border-amber-400/10 hover:border-amber-400/30 transition-all">
+                    <div class="text-2xl mb-3">📞</div>
+                    <div class="text-xs text-amber-400/60 uppercase tracking-widest mb-2">Call Us</div>
+                    <a href="tel:+2347083162538" class="text-lg font-bold text-white hover:text-amber-400 transition-colors">0708 316 2538</a>
+                    <div class="text-xs text-gray-600 mt-1">0803 830 7326</div>
+                </div>
+                
+                <div class="glass p-6 rounded-2xl border border-amber-400/10 hover:border-amber-400/30 transition-all">
+                    <div class="text-2xl mb-3">💬</div>
+                    <div class="text-xs text-amber-400/60 uppercase tracking-widest mb-2">WhatsApp</div>
+                    <a href="https://wa.me/2348038307326" class="text-lg font-bold text-white hover:text-amber-400 transition-colors">0803 830 7326</a>
+                    <div class="text-xs text-gray-600 mt-1">Click to chat</div>
+                </div>
+                
+                <div class="glass p-6 rounded-2xl border border-amber-400/10 hover:border-amber-400/30 transition-all">
+                    <div class="text-2xl mb-3">✉️</div>
+                    <div class="text-xs text-amber-400/60 uppercase tracking-widest mb-2">Email</div>
+                    <a href="mailto:besttouchdrycleaningservice@gmail.com" class="text-sm font-bold text-white hover:text-amber-400 transition-colors break-all">besttouchdrycleaningservice@gmail.com</a>
+                </div>
+            </div>
+            
+            <div class="glass p-6 rounded-2xl border border-amber-400/10 max-w-md mx-auto mb-8">
+                <div class="text-2xl mb-3">📍</div>
+                <div class="text-xs text-amber-400/60 uppercase tracking-widest mb-2">Visit Us</div>
+                <div class="text-lg font-bold text-white">Aare Oluyole, Ibadan</div>
+                <div class="text-sm text-gray-400">Nigeria</div>
+            </div>
+            
+            <button onclick="openBooking()" class="btn-primary px-12 py-4 rounded-full text-base tracking-wide shadow-lg shadow-amber-500/30">
+                BOOK PICKUP NOW
+            </button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark py-12 border-t border-amber-400/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center mb-8">
+                <div class="flex items-center space-x-3 mb-4 md:mb-0">
+                    <div class="w-10 h-10 rounded-full overflow-hidden border-2 border-amber-400 bg-black flex items-center justify-center">
+                        <img src="https://lh3.googleusercontent.com/d/1AeP31TSiTujAz0lH4J-Yk2-36hEFl5vF" alt="BT Logo" class="w-full h-full logo-img" onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=\'text-amber-400 font-bold text-lg\'>BT</span>'">
+                    </div>
+                    <span class="text-lg font-bold tracking-wider text-white">BEST TOUCH</span>
+                </div>
+                
+                <div class="flex space-x-6 text-xs text-gray-500 uppercase tracking-widest">
+                    <a href="https://wa.me/2348038307326" class="hover:text-amber-400 transition-colors">WhatsApp</a>
+                    <a href="#" class="hover:text-amber-400 transition-colors">Instagram</a>
+                    <a href="#" class="hover:text-amber-400 transition-colors">Facebook</a>
+                </div>
+            </div>
+            
+            <div class="border-t border-amber-400/10 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-600 uppercase tracking-wider">
+                <p>&copy; 2024 Best Touch Laundry Services</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-amber-400 transition-colors">Privacy</a>
+                    <a href="#" class="hover:text-amber-400 transition-colors">Terms</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Enhanced Booking Modal -->
+    <div id="booking-modal" class="fixed inset-0 z-50 hidden">
+        <div class="absolute inset-0 bg-black/90 backdrop-blur-sm" onclick="closeBooking()"></div>
+        <div class="absolute inset-0 flex items-center justify-center p-4">
+            <div class="bg-darker rounded-3xl p-8 max-w-md w-full relative transform transition-all scale-100 shadow-2xl border border-amber-400/20 max-h-[90vh] overflow-y-auto">
+                <button onclick="closeBooking()" class="absolute top-4 right-4 text-gray-500 hover:text-amber-400 transition-colors">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                </button>
+                
+                <div class="text-center mb-6">
+                    <div class="w-16 h-16 mx-auto rounded-full overflow-hidden border-2 border-amber-400 bg-black flex items-center justify-center mb-4">
+                        <img src="https://lh3.googleusercontent.com/d/1AeP31TSiTujAz0lH4J-Yk2-36hEFl5vF" alt="BT Logo" class="w-full h-full logo-img" onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=\'text-amber-400 font-bold text-2xl\'>BT</span>'">
+                    </div>
+                    <h3 class="text-2xl font-bold tracking-tight text-white">BOOK SERVICE</h3>
+                    <p class="text-amber-400/60 text-xs uppercase tracking-widest mt-2">Choose your preferred contact method</p>
+                </div>
+                
+                <form id="booking-form" onsubmit="handleBooking(event)" class="space-y-4">
+                    <!-- Order Reference (Auto-generated) -->
+                    <div class="hidden">
+                        <input type="text" id="order-ref" readonly>
+                    </div>
+                    
+                    <!-- Order Method Selection -->
+                    <div>
+                        <label class="block text-xs font-medium mb-2 text-amber-400/60 uppercase tracking-wider">Order Method *</label>
+                        <div class="grid grid-cols-2 gap-2">
+                            <button type="button" onclick="selectOrderMethod('whatsapp')" id="btn-whatsapp" class="method-btn active px-4 py-3 rounded-lg text-sm text-amber-400 border border-amber-400/30 flex items-center justify-center gap-2">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                                WhatsApp
+                            </button>
+                            <button type="button" onclick="selectOrderMethod('email')" id="btn-email" class="method-btn px-4 py-3 rounded-lg text-sm text-amber-400 border border-amber-400/30 flex items-center justify-center gap-2">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                                Email
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-xs font-medium mb-2 text-amber-400/60 uppercase tracking-wider">Service *</label>
+                        <select id="service-select" class="w-full bg-black border border-amber-400/20 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-amber-400 transition-colors text-sm">
+                            <option value="Wash & Fold">Wash & Fold (₦400-₦500/item)</option>
+                            <option value="Dry Cleaning">Dry Cleaning (item)</option>
+                        </select>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-xs font-medium mb-2 text-amber-400/60 uppercase tracking-wider">Full Name *</label>
+                        <input type="text" id="customer-name" required class="w-full bg-black border border-amber-400/20 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-amber-400 transition-colors text-sm" placeholder="Your name">
+                    </div>
+                    
+                    <div>
+                        <label class="block text-xs font-medium mb-2 text-amber-400/60 uppercase tracking-wider">Phone Number *</label>
+                        <input type="tel" id="customer-phone" required class="w-full bg-black border border-amber-400/20 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-amber-400 transition-colors text-sm" placeholder="0800 000 0000">
+                    </div>
+                    
+                    <!-- Location Type Selection -->
+                    <div>
+                        <label class="block text-xs font-medium mb-2 text-amber-400/60 uppercase tracking-wider">Location Type *</label>
+                        <div class="grid grid-cols-2 gap-2">
+                            <button type="button" onclick="selectLocationType('address')" id="btn-address" class="location-btn active px-4 py-2 rounded-lg text-sm text-amber-400 border border-amber-400/30">
+                                📍 Enter Address
+                            </button>
+                            <button type="button" onclick="selectLocationType('live')" id="btn-live" class="location-btn px-4 py-2 rounded-lg text-sm text-amber-400 border border-amber-400/30">
+                                📱 Live Location
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Address Input -->
+                    <div id="address-input">
+                        <label class="block text-xs font-medium mb-2 text-amber-400/60 uppercase tracking-wider">Delivery Address *</label>
+                        <input type="text" id="customer-address" required class="w-full bg-black border border-amber-400/20 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-amber-400 transition-colors text-sm" placeholder="Street name, landmark, house number">
+                    </div>
+                    
+                    <!-- Live Location Display -->
+                    <div id="live-location" class="hidden">
+                        <label class="block text-xs font-medium mb-2 text-amber-400/60 uppercase tracking-wider">Live Location</label>
+                        <div class="bg-black border border-amber-400/20 rounded-lg p-3">
+                            <div id="location-status" class="text-sm text-gray-400 mb-2">Click button to get location</div>
+                            <button type="button" onclick="getLiveLocation()" class="w-full bg-amber-400/20 text-amber-400 py-2 rounded-lg text-sm hover:bg-amber-400/30 transition-all flex items-center justify-center gap-2">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                                Get My Location
+                            </button>
+                            <input type="hidden" id="location-coords">
+                            <input type="hidden" id="location-link">
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-xs font-medium mb-2 text-amber-400/60 uppercase tracking-wider">Preferred Date *</label>
+                        <input type="date" id="pickup-date" required class="w-full bg-black border border-amber-400/20 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-amber-400 transition-colors text-sm">
+                    </div>
+                    
+                    <div>
+                        <label class="block text-xs font-medium mb-2 text-amber-400/60 uppercase tracking-wider">Number of Items</label>
+                        <input type="number" id="item-count" min="1" class="w-full bg-black border border-amber-400/20 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-amber-400 transition-colors text-sm" placeholder="How many items?">
+                    </div>
+
+                    <!-- Selected Items from Price List -->
+                    <div>
+                        <label class="block text-xs font-medium mb-2 text-amber-400/60 uppercase tracking-wider">Selected Items</label>
+                        <textarea id="selected-items" rows="2" class="w-full bg-black border border-amber-400/20 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-amber-400 transition-colors text-sm resize-none" placeholder="Items you selected from the price list (e.g., 3 Shirts, 2 Trousers...)"></textarea>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-xs font-medium mb-2 text-amber-400/60 uppercase tracking-wider">Special Instructions</label>
+                        <textarea id="special-notes" rows="2" class="w-full bg-black border border-amber-400/20 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-amber-400 transition-colors text-sm resize-none" placeholder="Any special requests or stains to treat?"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="w-full bg-amber-400 text-black py-4 rounded-lg font-bold tracking-wide hover:bg-amber-300 transition-all mt-2 text-sm uppercase shadow-lg shadow-amber-500/30 flex items-center justify-center gap-2">
+                        <span id="submit-btn-text">SEND ORDER VIA WHATSAPP</span>
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path></svg>
+                    </button>
+                    
+                    <p id="submit-note" class="text-xs text-gray-500 text-center mt-4">Order will be sent to our WhatsApp</p>
+                </form>
+                
+                <!-- Success Message with Order Details -->
+                <div id="success-message" class="hidden text-center py-8">
+                    <div class="w-16 h-16 bg-amber-400 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2 tracking-tight text-white">ORDER RECEIVED!</h4>
+                    <div class="bg-black/50 rounded-lg p-4 mb-4 border border-amber-400/20">
+                        <p class="text-xs text-gray-400 uppercase tracking-wider mb-1">Your Order Reference</p>
+                        <p id="display-order-ref" class="text-2xl font-bold text-amber-400 order-ref">BT-0000</p>
+                    </div>
+                    <p class="text-gray-400 text-sm mb-4">Please save this reference number for tracking</p>
+                    <div class="space-y-2 text-sm">
+                        <p class="text-amber-400">We'll contact you shortly</p>
+                        <p class="text-gray-500" id="success-contact-method">WhatsApp: 0803 830 7326</p>
+                    </div>
+                    <button onclick="closeBooking()" class="mt-6 px-6 py-2 bg-amber-400 text-black rounded-full hover:bg-amber-300 transition-all text-sm font-bold">
+                        Done
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Price List Full View Modal -->
+    <div id="price-list-modal" class="fixed inset-0 z-50 hidden">
+        <div class="absolute inset-0 bg-black/95 backdrop-blur-sm" onclick="closePriceListModal()"></div>
+        <div class="absolute inset-0 flex items-center justify-center p-4">
+            <div class="bg-darker rounded-3xl p-6 max-w-4xl w-full relative transform transition-all scale-100 shadow-2xl border border-amber-400/20 max-h-[95vh] overflow-y-auto">
+                <button onclick="closePriceListModal()" class="absolute top-4 right-4 text-gray-500 hover:text-amber-400 transition-colors z-10 bg-black/50 rounded-full p-2">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                </button>
+                
+                <div class="text-center mb-6">
+                    <h3 class="text-2xl font-bold tracking-tight text-white">PRICE LIST</h3>
+                    <p class="text-amber-400/60 text-sm mt-2">Select items you want to order</p>
+                </div>
+
+                <!-- Full Size Price List Image -->
+                <div class="price-list-container mb-6">
+                    <img id="modal-price-list-image" src="https://i.ibb.co/Sw6ZSvhR/file-0000000095787246bf8bea5492df00c3.png" alt="Best Touch Laundry Price List" class="w-full">
+                </div>
+
+                <!-- Quick Actions -->
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <button onclick="closePriceListModal(); openBooking();" class="btn-primary px-8 py-3 rounded-full text-sm tracking-wide">
+                        PLACE ORDER NOW
+                    </button>
+                    <a id="download-price-list" href="https://i.ibb.co/Sw6ZSvhR/file-0000000095787246bf8bea5492df00c3.png" download class="btn-outline px-8 py-3 rounded-full text-sm tracking-wide text-center">
+                        DOWNLOAD PRICE LIST
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Current order method
+        let currentOrderMethod = 'whatsapp';
+
+        // Generate unique order reference
+        function generateOrderRef() {
+            const timestamp = Date.now().toString(36).toUpperCase();
+            const random = Math.random().toString(36).substring(2, 5).toUpperCase();
+            return `BT-${timestamp}-${random}`;
+        }
+
+        // Order method selection
+        function selectOrderMethod(method) {
+            const btnWhatsapp = document.getElementById('btn-whatsapp');
+            const btnEmail = document.getElementById('btn-email');
+            const submitBtnText = document.getElementById('submit-btn-text');
+            const submitNote = document.getElementById('submit-note');
+            
+            currentOrderMethod = method;
+            
+            if (method === 'whatsapp') {
+                btnWhatsapp.classList.add('active');
+                btnEmail.classList.remove('active');
+                submitBtnText.textContent = 'SEND ORDER VIA WHATSAPP';
+                submitNote.textContent = 'Order will be sent to our WhatsApp';
+            } else {
+                btnEmail.classList.add('active');
+                btnWhatsapp.classList.remove('active');
+                submitBtnText.textContent = 'SEND ORDER VIA EMAIL';
+                submitNote.textContent = 'Order will be sent to our Email';
+            }
+        }
+
+        // Location type selection
+        function selectLocationType(type) {
+            const btnAddress = document.getElementById('btn-address');
+            const btnLive = document.getElementById('btn-live');
+            const addressInput = document.getElementById('address-input');
+            const liveLocation = document.getElementById('live-location');
+            const addressField = document.getElementById('customer-address');
+            
+            if (type === 'address') {
+                btnAddress.classList.add('active');
+                btnLive.classList.remove('active');
+                addressInput.classList.remove('hidden');
+                liveLocation.classList.add('hidden');
+                addressField.required = true;
+            } else {
+                btnLive.classList.add('active');
+                btnAddress.classList.remove('active');
+                liveLocation.classList.remove('hidden');
+                addressInput.classList.add('hidden');
+                addressField.required = false;
+            }
+        }
+
+        // Get live location
+        function getLiveLocation() {
+            const statusDiv = document.getElementById('location-status');
+            const coordsInput = document.getElementById('location-coords');
+            const linkInput = document.getElementById('location-link');
+            
+            statusDiv.innerHTML = '<span class="text-amber-400">Getting location...</span>';
+            
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(
+                    function(position) {
+                        const lat = position.coords.latitude;
+                        const lng = position.coords.longitude;
+                        const mapsLink = `https://www.google.com/maps?q=${lat},${lng}`;
+                        
+                        coordsInput.value = `${lat},${lng}`;
+                        linkInput.value = mapsLink;
+                        
+                        statusDiv.innerHTML = `
+                            <div class="text-green-400 mb-2">✓ Location captured</div>
+                            <a href="${mapsLink}" target="_blank" class="text-amber-400 text-xs underline">View on Google Maps</a>
+                        `;
+                    },
+                    function(error) {
+                        statusDiv.innerHTML = '<span class="text-red-400">Unable to get location. Please enter address manually.</span>';
+                        setTimeout(() => selectLocationType('address'), 2000);
+                    }
+                );
+            } else {
+                statusDiv.innerHTML = '<span class="text-red-400">Location not supported. Please enter address.</span>';
+                setTimeout(() => selectLocationType('address'), 2000);
+            }
+        }
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-black/95', 'shadow-lg', 'shadow-amber-500/10');
+            } else {
+                navbar.classList.remove('bg-black/95', 'shadow-lg', 'shadow-amber-500/10');
+            }
+        });
+
+        // Modal Functions
+        function openBooking(service = 'Wash & Fold') {
+            const select = document.getElementById('service-select');
+            if (service === 'wash-fold') {
+                select.value = 'Wash & Fold';
+            } else if (service === 'dry-cleaning') {
+                select.value = 'Dry Cleaning';
+            } else {
+                select.value = service;
+            }
+            
+            // Generate order reference
+            document.getElementById('order-ref').value = generateOrderRef();
+            
+            // Reset location to address
+            selectLocationType('address');
+            
+            // Set minimum date to today
+            const today = new Date().toISOString().split('T')[0];
+            document.getElementById('pickup-date').min = today;
+            
+            document.getElementById('booking-modal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeBooking() {
+            document.getElementById('booking-modal').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+            setTimeout(() => {
+                document.getElementById('success-message').classList.add('hidden');
+                document.getElementById('booking-form').classList.remove('hidden');
+                document.getElementById('booking-form').reset();
+            }, 300);
+        }
+
+        function selectService(service) {
+            openBooking(service);
+        }
+
+        // Price List Modal Functions
+        function openPriceListModal() {
+            document.getElementById('price-list-modal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closePriceListModal() {
+            document.getElementById('price-list-modal').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Handle Booking - Send to WhatsApp or Email
+        function handleBooking(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const orderRef = document.getElementById('order-ref').value;
+            const service = document.getElementById('service-select').value;
+            const name = document.getElementById('customer-name').value;
+            const phone = document.getElementById('customer-phone').value;
+            const date = document.getElementById('pickup-date').value;
+            const items = document.getElementById('item-count').value || 'Not specified';
+            const selectedItems = document.getElementById('selected-items').value || 'None';
+            const notes = document.getElementById('special-notes').value || 'None';
+            
+            // Get location based on type
+            const isLiveLocation = document.getElementById('btn-live').classList.contains('active');
+            let locationInfo;
+            
+            if (isLiveLocation) {
+                const coords = document.getElementById('location-coords').value;
+                const mapsLink = document.getElementById('location-link').value;
+                if (coords) {
+                    locationInfo = `LIVE LOCATION: ${coords}\nMap: ${mapsLink}`;
+                } else {
+                    alert('Please get your live location first or switch to address input');
+                    return;
+                }
+            } else {
+                const address = document.getElementById('customer-address').value;
+                locationInfo = `ADDRESS: ${address}`;
+            }
+            
+            // Format date
+            const formattedDate = new Date(date).toLocaleDateString('en-NG', {
+                weekday: 'long',
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+            });
+            
+            // Create order message
+            const message = `*NEW LAUNDRY ORDER*\n` +
+                `━━━━━━━━━━━━━━━━━━━━\n` +
+                `*Order Ref:* ${orderRef}\n` +
+                `*Service:* ${service}\n` +
+                `━━━━━━━━━━━━━━━━━━━━\n` +
+                `*Customer:* ${name}\n` +
+                `*Phone:* ${phone}\n` +
+                `*Pickup Date:* ${formattedDate}\n` +
+                `*Items Count:* ${items}\n` +
+                `━━━━━━━━━━━━━━━━━━━━\n` +
+                `*${locationInfo}*\n` +
+                `━━━━━━━━━━━━━━━━━━━━\n` +
+                `*Selected Items:* ${selectedItems}\n` +
+                `*Notes:* ${notes}\n\n` +
+                `Please confirm this order.`;
+            
+            // Show order reference to customer
+            document.getElementById('display-order-ref').textContent = orderRef;
+            
+            if (currentOrderMethod === 'whatsapp') {
+                // Open WhatsApp
+                const whatsappUrl = `https://api.whatsapp.com/send?phone=2348038307326&text=${encodeURIComponent(message)}`;
+                window.open(whatsappUrl, '_blank');
+                document.getElementById('success-contact-method').textContent = 'WhatsApp: 0803 830 7326';
+            } else {
+                // Send Email
+                const emailSubject = `New Laundry Order - ${orderRef}`;
+                const emailBody = message.replace(/\n/g, '%0D%0A');
+                const emailUrl = `mailto:besttouchdrycleaningservice@gmail.com?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(message)}`;
+                window.open(emailUrl, '_blank');
+                document.getElementById('success-contact-method').textContent = 'Email: besttouchdrycleaningservice@gmail.com';
+            }
+            
+            // Show success message
+            document.getElementById('booking-form').classList.add('hidden');
+            document.getElementById('success-message').classList.remove('hidden');
+        }
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Intersection Observer
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.service-card').forEach((el, index) => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = `all 0.6s ease ${index * 0.1}s`;
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
